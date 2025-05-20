@@ -167,6 +167,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\BMIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -188,6 +190,10 @@
     <Content Include="Style\fonts\fontawesome-webfont.woff" />
     <Content Include="Style\fonts\fontawesome-webfont.woff2" />
     <Content Include="Style\fonts\FontAwesome.otf" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\BMI\Index.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
