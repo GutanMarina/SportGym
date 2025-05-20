@@ -1,40 +1,67 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="zxx">
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gym | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/Style/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/style.css" type="text/css">
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Preloder End -->
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        @Html.Partial("_Header")
+    </header>
+    <!-- Header End -->
+
+    @RenderBody()
+
+    <!-- Footer Section Begin -->
+    <section class="footer-section">
+        @Html.Partial("_Footer")
+    </section>
+    <!-- Footer Section End -->
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
         </div>
     </div>
-
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!-- Search model end -->
+    <!-- Js Plugins -->
+    <script src="~/Style/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Style/js/bootstrap.min.js"></script>
+    <script src="~/Style/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Style/js/masonry.pkgd.min.js"></script>
+    <script src="~/Style/js/jquery.barfiller.js"></script>
+    <script src="~/Style/js/jquery.slicknav.js"></script>
+    <script src="~/Style/js/owl.carousel.min.js"></script>
+    <script src="~/Style/js/main.js"></script>
 </body>
+
 </html>
