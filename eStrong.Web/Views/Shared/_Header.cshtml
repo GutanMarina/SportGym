@@ -1,7 +1,59 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "_Header";
 }
 
-<h2>_Header</h2>
 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="~/Style/img/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <nav class="nav-menu">
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About Us", "AboutUs", "Home")</li>
+                    <li>@Html.ActionLink("Classes", "Classes", "Home")</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li><!--nu-i gata!-->
+                    <li>@Html.ActionLink("Our Team", "OurTeam", "Home")</li>
+
+
+                    <li>
+                        <a href="#">Explore</a>
+                        <ul class="dropdown">
+                            <li>@Html.ActionLink("About us", "AboutUs", "Home")</li>
+                            <li>@Html.ActionLink("Classes timetable", "ClassesTimetable", "Home")</li>
+                            <li>@Html.ActionLink("Bmi calculate", "Index", "BMI")</li>
+                            <li>@Html.ActionLink("Our team", "OurTeam", "Home")</li>
+                            <li>@Html.ActionLink("Gallery", "Gallery", "Home")</li>
+                            <li>@Html.ActionLink("Our blog", "Index", "Blog")</li>
+
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-3">
+            <div class="top-option">
+                <div class="to-search search-switch">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="to-social">
+                    <a href="@Url.Action("Index", "Home")"><i class="fa fa-facebook"></i></a>
+                    <a href="@Url.Action("Index", "Home")"><i class="fa fa-twitter"></i></a>
+                    <a href="@Url.Action("Index", "Home")"><i class="fa fa-youtube-play"></i></a>
+                    <a href="@Url.Action("Index", "Home")"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="canvas-open">
+        <i class="fa fa-bars"></i>
+    </div>
+</div>
