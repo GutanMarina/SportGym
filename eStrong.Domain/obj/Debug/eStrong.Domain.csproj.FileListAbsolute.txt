@@ -1,9 +1,0 @@
-C:\Users\user\source\repos\eStrong\eStrong.Domain\bin\Debug\eStrong.Domain.dll
-C:\Users\user\source\repos\eStrong\eStrong.Domain\bin\Debug\eStrong.Domain.pdb
-C:\Users\user\source\repos\eStrong\eStrong.Domain\bin\Debug\eStrong.Helpers.dll
-C:\Users\user\source\repos\eStrong\eStrong.Domain\bin\Debug\eStrong.Helpers.pdb
-C:\Users\user\source\repos\eStrong\eStrong.Domain\obj\Debug\eStrong.Domain.csproj.AssemblyReference.cache
-C:\Users\user\source\repos\eStrong\eStrong.Domain\obj\Debug\eStrong.Domain.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\eStrong\eStrong.Domain\obj\Debug\eStrong..6C32AEA1.Up2Date
-C:\Users\user\source\repos\eStrong\eStrong.Domain\obj\Debug\eStrong.Domain.dll
-C:\Users\user\source\repos\eStrong\eStrong.Domain\obj\Debug\eStrong.Domain.pdb
