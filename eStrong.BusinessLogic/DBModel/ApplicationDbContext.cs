@@ -12,7 +12,7 @@ namespace eStrong.BusinessLogic.DBModel
     class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext() :
-            base("name = eGymLife")
+            base("name = eStrong")
         {
         }
         public DbSet<UDbTable> UDbTable { get; set; }
