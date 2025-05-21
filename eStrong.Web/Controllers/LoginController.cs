@@ -30,6 +30,7 @@ namespace eStrong.Web.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Login(UserDataLogin login)
         {
