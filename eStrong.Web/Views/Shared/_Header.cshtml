@@ -35,7 +35,15 @@
                         </ul>
                     </li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
+
+                    @if (Session["LoginStatus"] != null && Session["LoginStatus"].ToString() == "login")
+                    {
+                        <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                    }
                 </ul>
             </nav>
         </div>
