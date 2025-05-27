@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -90,14 +97,93 @@
   <ItemGroup>
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Style\css\barfiller.css" />
+    <Content Include="Style\css\bootstrap.min.css" />
+    <Content Include="Style\css\flaticon.css" />
+    <Content Include="Style\css\font-awesome.min.css" />
+    <Content Include="Style\css\login.css" />
+    <Content Include="Style\css\magnific-popup.css" />
+    <Content Include="Style\css\owl.carousel.min.css" />
+    <Content Include="Style\css\slicknav.min.css" />
+    <Content Include="Style\css\style.css" />
+    <Content Include="Style\fonts\Flaticon.svg" />
+    <Content Include="Style\fonts\fontawesome-webfont.svg" />
+    <Content Include="Style\img\about-us.jpg" />
+    <Content Include="Style\img\banner-bg.jpg" />
+    <Content Include="Style\img\blog\blog-1.jpg" />
+    <Content Include="Style\img\blog\blog-2.jpg" />
+    <Content Include="Style\img\blog\blog-3.jpg" />
+    <Content Include="Style\img\blog\blog-4.jpg" />
+    <Content Include="Style\img\blog\blog-5.jpg" />
+    <Content Include="Style\img\blog\details\blog-profile.jpg" />
+    <Content Include="Style\img\blog\details\comment-1.jpg" />
+    <Content Include="Style\img\blog\details\comment-2.jpg" />
+    <Content Include="Style\img\blog\details\comment-3.jpg" />
+    <Content Include="Style\img\blog\details\details-1.jpg" />
+    <Content Include="Style\img\blog\details\details-2.jpg" />
+    <Content Include="Style\img\blog\details\details-hero.jpg" />
+    <Content Include="Style\img\blog\details\quote-left.png" />
+    <Content Include="Style\img\breadcrumb-bg.jpg" />
+    <Content Include="Style\img\classes\class-1.jpg" />
+    <Content Include="Style\img\classes\class-2.jpg" />
+    <Content Include="Style\img\classes\class-3.jpg" />
+    <Content Include="Style\img\classes\class-4.jpg" />
+    <Content Include="Style\img\classes\class-5.jpg" />
+    <Content Include="Style\img\classes\class-details\class-detailsl.jpg" />
+    <Content Include="Style\img\classes\class-details\trainer-profile.jpg" />
+    <Content Include="Style\img\gallery\gallery-1.jpg" />
+    <Content Include="Style\img\gallery\gallery-2.jpg" />
+    <Content Include="Style\img\gallery\gallery-3.jpg" />
+    <Content Include="Style\img\gallery\gallery-4.jpg" />
+    <Content Include="Style\img\gallery\gallery-5.jpg" />
+    <Content Include="Style\img\gallery\gallery-6.jpg" />
+    <Content Include="Style\img\gallery\gallery-7.jpg" />
+    <Content Include="Style\img\gallery\gallery-8.jpg" />
+    <Content Include="Style\img\gallery\gallery-9.jpg" />
+    <Content Include="Style\img\hero\hero-1.jpg" />
+    <Content Include="Style\img\hero\hero-2.jpg" />
+    <Content Include="Style\img\hero\hol4.jpg" />
+    <Content Include="Style\img\letest-blog\latest-1.jpg" />
+    <Content Include="Style\img\letest-blog\latest-2.jpg" />
+    <Content Include="Style\img\letest-blog\latest-3.jpg" />
+    <Content Include="Style\img\letest-blog\latest-4.jpg" />
+    <Content Include="Style\img\letest-blog\latest-5.jpg" />
+    <Content Include="Style\img\logo.png" />
+    <Content Include="Style\img\services\services-1.jpg" />
+    <Content Include="Style\img\services\services-2.jpg" />
+    <Content Include="Style\img\services\services-3.jpg" />
+    <Content Include="Style\img\services\services-4.jpg" />
+    <Content Include="Style\img\sidebar-banner.jpg" />
+    <Content Include="Style\img\team\team-1.jpg" />
+    <Content Include="Style\img\team\team-2.jpg" />
+    <Content Include="Style\img\team\team-3.jpg" />
+    <Content Include="Style\img\team\team-4.jpg" />
+    <Content Include="Style\img\team\team-5.jpg" />
+    <Content Include="Style\img\team\team-6.jpg" />
+    <Content Include="Style\img\testimonial\testimonial-1.jpg" />
+    <Content Include="Style\img\testimonial\testimonial-2.jpg" />
+    <Content Include="Style\js\bootstrap.min.js" />
+    <Content Include="Style\js\jquery-3.3.1.min.js" />
+    <Content Include="Style\js\jquery.barfiller.js" />
+    <Content Include="Style\js\jquery.magnific-popup.min.js" />
+    <Content Include="Style\js\jquery.slicknav.js" />
+    <Content Include="Style\js\main.js" />
+    <Content Include="Style\js\masonry.pkgd.min.js" />
+    <Content Include="Style\js\owl.carousel.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\BMIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Login\UserDataLogin.cs" />
+    <Compile Include="Models\Register\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +192,31 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Style\fonts\Flaticon.eot" />
+    <Content Include="Style\fonts\Flaticon.ttf" />
+    <Content Include="Style\fonts\Flaticon.woff" />
+    <Content Include="Style\fonts\Flaticon.woff2" />
+    <Content Include="Style\fonts\fontawesome-webfont.eot" />
+    <Content Include="Style\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Style\fonts\fontawesome-webfont.woff" />
+    <Content Include="Style\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Style\fonts\FontAwesome.otf" />
+    <Content Include="Views\BMI\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\Classes.cshtml" />
+    <Content Include="Views\Home\ClassesTimetable.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\OurTeam.cshtml" />
+    <Content Include="Views\Home\Services.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
+    <Content Include="Views\Shared\_Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,7 +226,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eStrong.BusinessLogic\eStrong.BusinessLogic.csproj">
@@ -157,7 +267,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

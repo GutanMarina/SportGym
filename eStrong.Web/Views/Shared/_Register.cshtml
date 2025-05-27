@@ -1,0 +1,121 @@
+﻿@model eStrong.Web.Models.Register.UserRegister
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GymLife</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/Style/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/Style/css/slicknav.min.css" type="text/css">
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="~/Style/css/login.css">
+    <link rel="stylesheet" href="~/Style/css/style.css">
+</head>
+
+<body>
+    @RenderBody()
+    <!-- Navbar start -->
+    <header class="header-section">
+        @Html.Partial("_Header")
+    </header>
+    <!-- Navbar End -->
+
+
+    <section class="login-section vh-100" style="background: url=(/Style/img/hero/hero-1.jpg)" ;>
+        <div class="center">
+            <div class="container" style="margin-top: 29px;">
+                <div class="text">
+                    Registration
+                </div>
+
+
+                @Html.ValidationSummary(true)
+
+                @using (Html.BeginForm("Register", "Register", FormMethod.Post, new { @id = "RegisterForm" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="data">
+                        @Html.LabelFor(m => m.Username)
+                        @Html.TextBoxFor(m => m.Username, new
+                        {
+                            placeholder = "Username",
+                            title = "Please enter your username",
+                            @class = "form-control"
+                        })
+                    </div>
+
+                    <div class="data">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, new
+                        {
+                            placeholder = "example@gmail.com",
+                            title = "Please enter your email",
+                            @class = "form-control"
+                        })
+                    </div>
+
+                    <div class="data">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new
+                        {
+                            placeholder = "******",
+                            title = "Please enter your password",
+                            @class = "form-control"
+                        })
+                    </div>
+                    <div style="margin-top: 10px;">
+                        @if (TempData["ErrorMessage"] != null)
+                        {
+                            <div class="text-danger no-bullets" style="text-align: center;">
+                                <ul>
+                                    <li>@TempData["ErrorMessage"]</li>
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Register</button>
+                    </div>
+
+                    <div class="signup-link">
+                        Already a member? <a>@Html.ActionLink("Log in here", "Index", "Login")</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <script src="~/Style/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Style/js/bootstrap.min.js"></script>
+    <script src="~/Style/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Style/js/masonry.pkgd.min.js"></script>
+    <script src="~/Style/js/jquery.barfiller.js"></script>
+    <script src="~/Style/js/jquery.slicknav.js"></script>
+    <script src="~/Style/js/owl.carousel.min.js"></script>
+    <script src="~/Style/js/main.js"></script>
+</body>
+</html>
+<style>
+    .no-bullets ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+</style>
+
