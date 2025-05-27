@@ -9,13 +9,17 @@ using eStrong.Domain.Entities;
 
 namespace eStrong.BusinessLogic.DBModel
 {
-    class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext() :
-            base("name = eStrong")
+            base("name = eUseControl")
         {
         }
         public DbSet<UDbTable> UDbTable { get; set; }
+
+        public DbSet<Session> Sessions { get; set; }
+        public DbSet<BMIDbTable>BMI { get; set; }
+        public DbSet<BlogDbTable>Blog { get; set; }
 
     }
 

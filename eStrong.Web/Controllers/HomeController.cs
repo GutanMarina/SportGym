@@ -6,11 +6,12 @@ using System.Web.Mvc;
 
 namespace eStrong.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         // GET: Home
         public ActionResult Index()
         {
+            SessionStatus();
             return View();
         }
         public ActionResult AboutUs()

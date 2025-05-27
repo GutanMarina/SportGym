@@ -47,11 +47,14 @@ namespace eStrong.Web.Controllers
                     Password = model.Password,
                     RegistrationDateTime = DateTime.Now,
                     RegistrationIp = Request.UserHostAddress,
-                    LastLogin = DateTime.Now, // Inițializare corectă
+                    
                     Level = URole.User // Setare rol implicit
                 };
+                
 
-                _session.UserRegister(userData); // Metoda doar salvează userul
+                var result = _session.UserRegister(userData); // Metoda doar salvează userul
+                TempData["ErrorMessage"] = result;
+                RedirectToAction("Register", "Register");
 
                 return RedirectToAction("Register");
             }
