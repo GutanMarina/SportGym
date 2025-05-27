@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlStruct\BlogBL.cs" />
+    <Compile Include="BlStruct\BmiBL.cs" />
     <Compile Include="BlStruct\BusinessLogicBL.cs" />
     <Compile Include="BlStruct\LoginBl.cs" />
     <Compile Include="BlStruct\SessionBL.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Core\UserAPI.cs" />
     <Compile Include="DBModel\ApplicationDbContext.cs" />
     <Compile Include="Interfaces\IBlog.cs" />
+    <Compile Include="Interfaces\IBmi.cs" />
     <Compile Include="Interfaces\ISession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
