@@ -78,12 +78,16 @@
                             @class = "form-control"
                         })
                     </div>
-
-                    <div class="forgot-pass" style="padding-left: 10px;">
-                        I agree the
-                        <a href="#">Terms of service</a>
+                    <div style="margin-top: 10px;">
+                        @if (TempData["ErrorMessage"] != null)
+                        {
+                            <div class="text-danger no-bullets" style="text-align: center;">
+                                <ul>
+                                    <li>@TempData["ErrorMessage"]</li>
+                                </ul>
+                            </div>
+                        }
                     </div>
-
                     <div class="btn">
                         <div class="inner"></div>
                         <button type="submit">Register</button>
@@ -107,4 +111,11 @@
     <script src="~/Style/js/main.js"></script>
 </body>
 </html>
+<style>
+    .no-bullets ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+</style>
 
