@@ -201,8 +201,8 @@
     <Content Include="Style\fonts\fontawesome-webfont.woff" />
     <Content Include="Style\fonts\fontawesome-webfont.woff2" />
     <Content Include="Style\fonts\FontAwesome.otf" />
-    <Content Include="Views\BMI\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\BMI\Index.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Home\AboutUs.cshtml" />
@@ -213,10 +213,10 @@
     <Content Include="Views\Home\Gallery.cshtml" />
     <Content Include="Views\Home\OurTeam.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Shared\_Login.cshtml" />
     <Content Include="Views\Shared\_Register.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
