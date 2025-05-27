@@ -52,9 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\BlogDataDbTable.cs" />
+    <Compile Include="Entities\BlogDbTable.cs" />
+    <Compile Include="Entities\BMIDbTable.cs" />
+    <Compile Include="Entities\Session.cs" />
     <Compile Include="Entities\UDbTable.cs" />
     <Compile Include="Enums\URole.cs" />
+    <Compile Include="Model\BMI\BMICalculate.cs" />
     <Compile Include="Model\User\UserLoginDTO.cs" />
+    <Compile Include="Model\User\UserMinimal.cs" />
     <Compile Include="Model\User\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
