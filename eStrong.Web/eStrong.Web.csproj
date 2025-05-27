@@ -201,8 +201,8 @@
     <Content Include="Style\fonts\fontawesome-webfont.woff" />
     <Content Include="Style\fonts\fontawesome-webfont.woff2" />
     <Content Include="Style\fonts\FontAwesome.otf" />
-    <Content Include="Views\BMI\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\BMI\Index.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Home\AboutUs.cshtml" />
