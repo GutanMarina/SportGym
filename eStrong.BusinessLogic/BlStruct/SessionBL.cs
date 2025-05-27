@@ -11,17 +11,31 @@ using System.Data.Entity;
 using System.Web;
 using eStrong.BusinessLogic.DBModel;
 using eStrong.Domain.Entities;
+using System.Net;
 
 
 namespace eStrong.BusinessLogic.BlStruct
 {
     public class SessionBL : UserAPI, ISession
     {
-        public void UserRegister(UDbTable data)
+        public string UserRegister(UDbTable data)
         {
-            UserRegisterAction(data);
+            return UserRegisterAction(data);
         }
 
-    }
+        public UserMinimal UserDataLogin(UserLoginDTO data)
+        {
+            return UserLoginAction(data);
+        }
 
+        public HttpCookie GenCookie(string loginCredential)
+        {
+            return Cookie(loginCredential);
+        }
+        public UserMinimal GetUserByCookie(string apiCookieValue)
+        {
+            return UserCookie(apiCookieValue);
+          }
+    }
+    
 }

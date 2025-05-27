@@ -37,7 +37,7 @@ namespace eStrong.Domain.Entities.User
         public DateTime LastLogin { get; set; }
 
         [DataType(DataType.Date)]
-        public DateTime RegistrationDateTime { get; set; }
+        public DateTime RegistrationDateTime { get; set; } 
 
         [StringLength(30)]
         public string LastIp { get; set; }

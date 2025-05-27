@@ -3,6 +3,8 @@
     ViewBag.Title = "Index";
 }
 
+@model eStrong.Web.Models.BMI.BmiViewModel
+
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="/Style/img/breadcrumb-bg.jpg">
     <div class="container">
@@ -39,19 +41,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="@(Model.BmiResult <= 19 ? "orange-row" : "")">
                                 <td class="point">Below 18.5</td>
                                 <td>Underweight</td>
                             </tr>
-                            <tr>
+                            <tr class="@(Model.BmiResult > 19 && Model.BmiResult <= 25 ? "orange-row" : "")">
                                 <td class="point">18.5 - 24.9</td>
                                 <td>Healthy</td>
                             </tr>
-                            <tr>
+                            <tr class="@(Model.BmiResult > 25 && Model.BmiResult <= 30 ? "orange-row" : "")">
                                 <td class="point">25.0 - 29.9</td>
                                 <td>Overweight</td>
                             </tr>
-                            <tr>
+                            <tr class="@(Model.BmiResult > 30 ? "orange-row" : "")">
                                 <td class="point">30.0 - and Above</td>
                                 <td>Obese</td>
                             </tr>
@@ -70,25 +72,36 @@
                         labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
                         viverra maecenas accumsan lacus vel facilisis.
                     </p>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="Height / cm">
+                    @using (Html.BeginForm("CalculateBMI", "BMI", FormMethod.Post, new { @id = "BmiForm" }))
+                    
+                    {
+                       @Html.AntiForgeryToken()
+
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                   @Html.LabelFor(m => m.BmiData.Height, new { style = "color: white;" })
+
+                                   @Html.TextBoxFor(m => m.BmiData.Height, new {@class = "form-control", required = "required"})
+                                </div>
+                                <div class="col-sm-6">
+                                    @Html.LabelFor(m => m.BmiData.Weight, new { style = "color: white;" })
+                                    @Html.TextBoxFor(m => m.BmiData.Weight, new { @class = "form-control", required = "required" })
+                                </div>
+                                <div class="col-sm-6">
+                                    @Html.LabelFor(m => m.BmiData.Age, new { style = "color: white;" })
+                                    @Html.TextBoxFor(m => m.BmiData.Age, new { @class = "form-control", required = "required" })
+                                </div>
+                                <div class="col-sm-6">
+                                    @Html.LabelFor(m => m.BmiData.Gender, new { style = "color: white;" })
+                                    @Html.TextBoxFor(m => m.BmiData.Gender, new { @class = "form-control", required = "required" })
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit">Calculate</button>
+                                </div>
                             </div>
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="Weight / kg">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="Age">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="Sex">
-                            </div>
-                            <div class="col-lg-12">
-                                <button type="submit">Calculate</button>
-                            </div>
-                        </div>
-                    </form>
+                      
+                    }
                 </div>
             </div>
         </div>
@@ -143,4 +156,11 @@
 <script src="js/jquery.slicknav.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<style>
+    .orange-row {
+        background-color: #ff6600 !important;
+        font-weight: bold;
+        color:white;
+    }
+</style>
 
