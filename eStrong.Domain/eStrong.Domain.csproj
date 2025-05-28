@@ -58,6 +58,7 @@
     <Compile Include="Entities\Session.cs" />
     <Compile Include="Entities\UDbTable.cs" />
     <Compile Include="Enums\URole.cs" />
+    <Compile Include="Model\BMI\BMICalculate.cs" />
     <Compile Include="Model\User\UserLoginDTO.cs" />
     <Compile Include="Model\User\UserMinimal.cs" />
     <Compile Include="Model\User\UserRegister.cs" />
@@ -73,9 +74,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\BMI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

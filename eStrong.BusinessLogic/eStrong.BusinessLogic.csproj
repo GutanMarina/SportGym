@@ -55,9 +55,8 @@
     <Compile Include="BlStruct\BlogBL.cs" />
     <Compile Include="BlStruct\BmiBL.cs" />
     <Compile Include="BlStruct\BusinessLogicBL.cs" />
-    <Compile Include="BlStruct\LoginBl.cs" />
     <Compile Include="BlStruct\SessionBL.cs" />
-    <Compile Include="BusinessLogic.cs" />
+    <Compile Include="BusinessLogic.Manager.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Core\AdminApi.cs" />
     <Compile Include="Core\UserAPI.cs" />
