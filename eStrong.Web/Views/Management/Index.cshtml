@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Management.cshtml";
+}
+
+@model IEnumerable<eStrong.Web.Models.Blog.BlogData>
+
+<!-- Baner Section Begin -->
+<section class="breadcrumb-section set-bg" data-setbg="/Style/img/breadcrumb-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb-text">
+                    <h2>Blog Management</h2>
+                    <div class="bt-option">
+                        <a href="./index.html">Home</a>
+                        <a href="#">Pages</a>
+                        <span>Blog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="margin-top: 50px; margin-bottom: 150px; ">
+    <h2 style="text-align: center;">Manage Blogs</h2>
+    <p>
+
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+    <table class="table table-striped" style="padding-bottom: 50px; margin-bottom: 150px; ">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.First().Id)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Title)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Description)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Image)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.Reverse())
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                    <td class="description-cell">@Html.DisplayFor(modelItem => item.Description)</td>
+                    <td>
+                        <img src="@Url.Content(item.Image)" alt="@item.Title" class="image-square" />
+                    </td>
+                    <td>
+                        <div class="action-buttons">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <div>
+
+    </div>
+</section>
+<!--
+</body>
+</html>
+<style>
+    .no-bullets ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+</style>-->
+
+<style>
+    .image-square {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .description-cell {
+        max-width: 600px;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+</style>
