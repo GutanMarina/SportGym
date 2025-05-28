@@ -170,20 +170,24 @@
     <Content Include="Style\js\main.js" />
     <Content Include="Style\js\masonry.pkgd.min.js" />
     <Content Include="Style\js\owl.carousel.min.js" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\BMIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Extension\HttpContextExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Blog\BlogData.cs" />
     <Compile Include="Models\Blog\BlogInfo.cs" />
+    <Compile Include="Models\BMI\BmiData.cs" />
+    <Compile Include="Models\BMI\BmiViewModel.cs" />
     <Compile Include="Models\Login\UserDataLogin.cs" />
     <Compile Include="Models\Register\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -220,6 +224,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Blog\BlogDetails.cshtml" />
+    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
