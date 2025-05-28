@@ -179,6 +179,7 @@
     <Compile Include="Controllers\BMIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Extension\HttpContextExtensions.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,6 +187,7 @@
     </Compile>
     <Compile Include="Models\Blog\BlogData.cs" />
     <Compile Include="Models\Blog\BlogInfo.cs" />
+    <Compile Include="Models\Blog\BlogManagement.cs" />
     <Compile Include="Models\BMI\BmiData.cs" />
     <Compile Include="Models\BMI\BmiViewModel.cs" />
     <Compile Include="Models\Login\UserDataLogin.cs" />
@@ -225,6 +227,11 @@
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Blog\BlogDetails.cshtml" />
     <Content Include="Web.config" />
+    <Content Include="Views\Management\Index.cshtml" />
+    <Content Include="Views\Management\Create.cshtml" />
+    <Content Include="Views\Management\Delete.cshtml" />
+    <Content Include="Views\Management\Edit.cshtml" />
+    <Content Include="Views\Shared\_Management.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
