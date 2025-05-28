@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,6 +45,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\BlogDataDbTable.cs" />
+    <Compile Include="Entities\BlogDbTable.cs" />
+    <Compile Include="Entities\BMIDbTable.cs" />
+    <Compile Include="Entities\Session.cs" />
+    <Compile Include="Entities\UDbTable.cs" />
+    <Compile Include="Enums\URole.cs" />
+    <Compile Include="Model\BMI\BMICalculate.cs" />
+    <Compile Include="Model\User\UserLoginDTO.cs" />
+    <Compile Include="Model\User\UserMinimal.cs" />
+    <Compile Include="Model\User\UserRegister.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +62,9 @@
       <Project>{f7a401d9-f334-4981-8bac-da1db5045520}</Project>
       <Name>eStrong.Helpers</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
