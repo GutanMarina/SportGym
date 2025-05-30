@@ -72,7 +72,7 @@ If the user's login is successful, the main page is displayed and the Logout but
   ![BMITable](https://github.com/user-attachments/assets/34b527b4-c0b8-4ba7-9bef-80737d3003da)
 
       Figure 8 - BMI table In the Data Base
-  Figures 6 and 7 show the BMI page, where the user, after logging in, can enter data such as height, weight, age, and gender. The calculated BMI result is then displayed in the table on the left, highlighted in orange. The user can use the calculator as many times as they wish, and the results and data are saved in the BMI table in the database.
+  Figures 7 and 8 show the BMI page, where the user, after logging in, can enter data such as height, weight, age, and gender. The calculated BMI result is then displayed in the table on the left, highlighted in orange. The user can use the calculator as many times as they wish, and the results and data are saved in the BMI table in the database.
 
 # Blog Pages
 <p align="center">
