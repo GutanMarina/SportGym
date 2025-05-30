@@ -77,14 +77,14 @@ If the user's login is successful, the main page is displayed and the Logout but
 # Blog Pages
 <p align="center">
  
-  <img src="https://github.com/user-attachments/assets/a65912b1-68dc-4679-9d5d-080a102200b6" width="1050" />
+  <img src="https://github.com/user-attachments/assets/a65912b1-68dc-4679-9d5d-080a102200b6" width="1000" />
 
       Figure 9 - Blog page
  Figure 9 presents the blog page. The blogs are added using the database and contain both text and dynamic images.
 
-  <img src="https://github.com/user-attachments/assets/18355352-f13a-4bff-a02d-59e3cb1dd411" width="450"/>
+  <img src="https://github.com/user-attachments/assets/18355352-f13a-4bff-a02d-59e3cb1dd411" width="400"/>
   
-  <img src="https://github.com/user-attachments/assets/8c9ee188-b7d7-4812-acd3-f299fb63377a" width="450" />
+  <img src="https://github.com/user-attachments/assets/8c9ee188-b7d7-4812-acd3-f299fb63377a" width="400" />
   
 </p>
    
