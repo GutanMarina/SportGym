@@ -193,7 +193,7 @@ To install the application, follow these steps:
 ```
 
 
-## 👩‍💻 Contributors
+## Contributors
 
 For more details about our project or any general information, feel free to reach out to us.
 
