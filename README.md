@@ -4,9 +4,9 @@
 
 ## 📑 Table of Contents
 
-- [About](#-about)  
-- [How to Build](#️-how-to-build)  
-- [Contributors](#-contributors)  
+- [About](#about)  
+- [How to Build](#how-to-build)  
+- [Contributors](#contributors)  
 ---
 
 ## 🔬 About
