@@ -131,7 +131,7 @@ If the user's login is successful, the main page is displayed and the Logout but
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f9907ba6-d94d-492b-9d19-dadb8ea4e780" width="1000" />
   <br />
-  <img src="https://github.com/user-attachments/assets/e3c285a1-66c6-4ed5-b40f-cda61f7fbe19" width="600" />
+  <img src="https://github.com/user-attachments/assets/e3c285a1-66c6-4ed5-b40f-cda61f7fbe19" width="500" />
 </p>
  
       Figure 15 - Admin Dashboard: Manage Blogs Section
@@ -147,21 +147,21 @@ There is also a “Create New” button that, when clicked, redirects the admin 
   As shown in the figure above, the project is divided into 4 levels: BusinessLogic, Domain, Helpers and PresentationLayer.
     
 <p align="center">
-   <img src="https://github.com/user-attachments/assets/30bb631a-d6af-41e4-86c0-5addd1b41a37">
+   <img src="https://github.com/user-attachments/assets/30bb631a-d6af-41e4-86c0-5addd1b41a37" width="350" >
 </p>
  
     Figure 17 – Business Logic
   Business Logic is organized as follows: the Core map, the DBModels, where the context of the different entities is located, the Interfaces and classes such as SessionBL, BusinessLogic.
    
 <p align="center">
- <img src="https://github.com/user-attachments/assets/99d95ad0-ced8-44e4-b4aa-17a6496a658e">
+ <img src="https://github.com/user-attachments/assets/99d95ad0-ced8-44e4-b4aa-17a6496a658e" width="350" >
 </p>
 
     Figure 18 – Domain
   Entities such as User, Blog are present at the Domain level.
 
   <p align="center">
-     <img src="https://github.com/user-attachments/assets/f2e4d382-d79c-48f1-beab-5b6c5bd58e7c">
+     <img src="https://github.com/user-attachments/assets/f2e4d382-d79c-48f1-beab-5b6c5bd58e7c" width="350">
   </p>
    
     Figure 19 - Helpers 
