@@ -169,7 +169,7 @@ There is also a “Create New” button that, when clicked, redirects the admin 
 
   <p align="center">
      <img src="https://github.com/user-attachments/assets/598a8ff6-7fbc-4a13-97e5-5691912c5c07" width="350" />
-     <img src="https://github.com/user-attachments/assets/221c77d2-84f3-4018-adb7-763c4fb34151" width="500" />
+     <img src="https://github.com/user-attachments/assets/221c77d2-84f3-4018-adb7-763c4fb34151" width="400" />
   </p>   
 
     Figure 20 - eStrong.Web
