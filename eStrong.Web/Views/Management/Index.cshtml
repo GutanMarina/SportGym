@@ -29,38 +29,53 @@
 
         @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
     </p>
-    <table class="table table-striped" style="padding-bottom: 50px; margin-bottom: 150px; ">
-        <thead>
-            <tr>
-                <th>@Html.DisplayNameFor(model => model.First().Id)</th>
-                <th>@Html.DisplayNameFor(model => model.First().Title)</th>
-                <th>@Html.DisplayNameFor(model => model.First().Description)</th>
-                <th>@Html.DisplayNameFor(model => model.First().Image)</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var item in Model.Reverse())
-            {
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info text-center mt-4">
+            Nu există bloguri adăugate momentan.
+        </div>
+    }
+    else
+    {
+        <table class="table table-striped" style="padding-bottom: 50px; margin-bottom: 150px; ">
+            <thead>
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@Html.DisplayFor(modelItem => item.Title)</td>
-                    <td class="description-cell">@Html.DisplayFor(modelItem => item.Description)</td>
-                    <td>
-                        <img src="@Url.Content(item.Image)" alt="@item.Title" class="image-square" />
-                    </td>
-                    <td>
-                        <div class="action-buttons">
-                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
-                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-                        </div>
-                    </td>
+                    <th>@Html.DisplayNameFor(model => model.First().Id)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Title)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Description)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Image)</th>
+                    <th>Action</th>
                 </tr>
-            }
-        </tbody>
+            </thead>
 
-    </table>
+            <tbody>
+                @foreach (var item in Model.Reverse())
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Title</td>
+                        <td class="description-cell">@item.Description</td>
+                        <td>
+                            <img src="@Url.Content(item.Image)" alt="@item.Title" class="image-square" />
+                        </td>
+                        <td>
+                            <div class="action-buttons">
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                                @using (Html.BeginForm("Delete", "Management", FormMethod.Post, new { @class = "d-inline" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.Hidden("id", item.Id)
+                                    <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this blog?');" />
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    }
+
     <div>
 
     </div>
