@@ -129,50 +129,71 @@ If the user's login is successful, the main page is displayed and the Logout but
 
 # Admin pages
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f9907ba6-d94d-492b-9d19-dadb8ea4e780" width="1000" />
-  <br />
-  <img src="https://github.com/user-attachments/assets/e3c285a1-66c6-4ed5-b40f-cda61f7fbe19" width="500" />
-</p>
+  <img src="https://github.com/user-attachments/assets/28aa2723-a58d-4ab4-a7a7-20eba99e4ec0" width="500" />
+      
+      Figure 15 - Admin Panel_Blog Management Dashboard
+      
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5f069067-165b-48d5-b322-2ce1dc37055b" width="500" />
+
+      Figure 16 -  Create New Blog Post Form
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/873b6750-bc22-4472-b770-9a34834c310b" width="500" />
+
+      Figure 17 -  Manage Blog Post Form
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c449dbb9-5954-499e-9926-fb9050b0f2a3" width="500" />
+      
+     Figure 18 - Edit Blog Form
  
-      Figure 15 - Admin Dashboard: Manage Blogs Section
-In this figure, the admin dashboard displays a table of blog posts with their IDs, titles, descriptions, and options to edit or delete each entry. There is also a “Create New” button to add new blog posts to the gym website.
-There is also a “Create New” button that, when clicked, redirects the admin to another page where they can create a new blog by entering all the necessary details.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6417025e-bf12-4ce8-9437-350229e9998b" width="500" />
+
+     Figure 19 -  Delete Blog 
+     
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f9907ba6-d94d-492b-9d19-dadb8ea4e780" width="500" />
+
+In these figures, the admin dashboard displays a table of blog posts with their IDs, titles, descriptions, and options to edit or delete each entry. If no blogs have been added, the message 'No blogs added at the moment' will appear on the screen. There is also a “Create New” button to add new blog posts to the gym website.  When clicked, it redirects the admin to another page where they can create a new blog by entering all the necessary details. The admin can also edit and delete the blog. 
 
 # Project structure
 <p align="center">
   <img src="https://github.com/user-attachments/assets/40612ca0-1cc9-49ba-a378-7dd14ef8e116">
 </p>
      
-      Figure 16 - Project levels
+      Figure 20 - Project levels
   As shown in the figure above, the project is divided into 4 levels: BusinessLogic, Domain, Helpers and PresentationLayer.
     
 <p align="center">
-   <img src="https://github.com/user-attachments/assets/30bb631a-d6af-41e4-86c0-5addd1b41a37" width="350" >
+   <img src="https://github.com/user-attachments/assets/caa8028e-ba0f-4b78-bcc4-5db687d3a5c0" width="350" >
 </p>
  
-    Figure 17 – Business Logic
+    Figure 21 – Business Logic
   Business Logic is organized as follows: the Core map, the DBModels, where the context of the different entities is located, the Interfaces and classes such as SessionBL, BusinessLogic.
    
 <p align="center">
  <img src="https://github.com/user-attachments/assets/99d95ad0-ced8-44e4-b4aa-17a6496a658e" width="350" >
 </p>
 
-    Figure 18 – Domain
+    Figure 22 – Domain
   Entities such as User, Blog are present at the Domain level.
 
   <p align="center">
      <img src="https://github.com/user-attachments/assets/f2e4d382-d79c-48f1-beab-5b6c5bd58e7c" width="350">
   </p>
    
-    Figure 19 - Helpers 
+    Figure 23 - Helpers 
   The Helpers tier has helper classes for certain functions such as hashing
 
   <p align="center">
-     <img src="https://github.com/user-attachments/assets/598a8ff6-7fbc-4a13-97e5-5691912c5c07" width="350" />
-     <img src="https://github.com/user-attachments/assets/221c77d2-84f3-4018-adb7-763c4fb34151" width="400" />
+     <img src="https://github.com/user-attachments/assets/880ee2e6-f311-4532-a406-f3b650a01725" width="300" />
+     <img src="https://github.com/user-attachments/assets/f0af5dae-d155-4315-bf72-a530dab0a96b" width="300" />
+     <img src="https://github.com/user-attachments/assets/63d859b6-22b1-4efa-b26e-9f022e132ab2" width="300" />
   </p>   
 
-    Figure 20 - eStrong.Web
+    Figure 24 - eStrong.Web
 
   ## How to Build
 To install the application, follow these steps:
