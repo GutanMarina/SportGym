@@ -18,5 +18,9 @@ namespace eStrong.BusinessLogic
         {
             return new BlogBL();
         }
+        public IAdminSession GetAdminSessionBL()
+        {
+            return new AdminSessionBL();
+        }
     }
 }
