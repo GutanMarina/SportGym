@@ -188,9 +188,9 @@ In these figures, the admin dashboard displays a table of blog posts with their 
   The Helpers tier has helper classes for certain functions such as hashing
 
   <p align="center">
-     <img src="https://github.com/user-attachments/assets/880ee2e6-f311-4532-a406-f3b650a01725" width="300" />
-     <img src="https://github.com/user-attachments/assets/f0af5dae-d155-4315-bf72-a530dab0a96b" width="300" />
-     <img src="https://github.com/user-attachments/assets/63d859b6-22b1-4efa-b26e-9f022e132ab2" width="300" />
+     <img src="https://github.com/user-attachments/assets/880ee2e6-f311-4532-a406-f3b650a01725" width="280" />
+     <img src="https://github.com/user-attachments/assets/f0af5dae-d155-4315-bf72-a530dab0a96b" width="280" />
+     <img src="https://github.com/user-attachments/assets/63d859b6-22b1-4efa-b26e-9f022e132ab2" width="280" />
   </p>   
 
     Figure 24 - eStrong.Web
