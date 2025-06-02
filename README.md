@@ -189,10 +189,19 @@ To install the application, follow these steps:
 
 3. Additionally, you can connect to SQL Server Management Studio (SSMS), create a new database (e.g., eStrong.Web). Optionally, insert some initial data into the Blogs table.
 ```bash
-  app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://<username>:<password>@<hostname>:<port>/<database_name>'
+<connectionStrings>
+  <add name="YOUR_DATABASE_NAME" 
+       connectionString="Data Source=YOUR_SERVER_NAME; Initial Catalog=YOUR_DATABASE_NAME; Integrated Security=True; MultipleActiveResultSets=True; App=EntityFramework; TrustServerCertificate=True" 
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
 ```
-
-
+Also, in ApplicationDbContext.cs (located in eStrong.BusinessLogic): Update the constructor call to use your configured connection string name:
+```bash
+public ApplicationDbContext() :
+     base("name=YourBaseName") 
+{
+}
+```
 ## Contributors
 
 For more details about our project or any general information, feel free to reach out to us.
