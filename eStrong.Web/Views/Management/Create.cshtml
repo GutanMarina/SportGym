@@ -25,7 +25,7 @@
 <section style="margin-top: 50px; margin-bottom: 150px; ">
     <h2 class="text-center">Create New Blog</h2>
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("CreateBlog", "Management", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
 
@@ -65,7 +65,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } })
+                            <input type="file" name="ImageFile" class="form-control" />
                             @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -73,7 +73,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Create" class="btn btn-primary" />
+                            <input type="submit" value="CreateBlog" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>
